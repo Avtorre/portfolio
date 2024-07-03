@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CustomNavbar from "@/components/CustomNavbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-300`}>
+      <body className={`${inter.className} bg-slate-300 flex flex-col min-h-screen`}>
         <CustomNavbar/>
-        {children}
+          <main className="flex-1">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
