@@ -7,9 +7,19 @@ export type ProjectCard = {
 }
 
 export type ProjectInfo = {
+  page: string,
   title: string,
-  imageFolder: [string],
+  imageFolder: string[],
+  createdAt: string,
   description: string,
   github: string,
-  used: [string]
+  used: string[],
+  size: string
+}
+
+export type FetchedRepoInfo = {
+  createdAt: string,
+  description: string,
+  github: string,
+  size: string
 }

@@ -1,6 +1,6 @@
 
 const Resume = () => {
-  let summary = 'An enthusiastic Frontend Developer with experience in creating projects with HTML, CSS, Javascript, React.js, TypeScript, Next.js, Tailwind. Looking for working experience that will help to improve current skills and learn something new.'
+  let summary = 'An enthusiastic Frontend Developer with experience in creating projects with HTML, CSS, Javascript, React.js, TypeScript, Next.js, Tailwind CSS. Looking for working experience that will help improve current skills and learn something new.'
   let txt = 'some text here '
   let filler = []
   for (let i = 0; i < 90; i++) {
