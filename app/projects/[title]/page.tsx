@@ -32,20 +32,8 @@ export default function Project() {
   const curProj: ProjectCard | undefined = ProjectLib.find((p) => p.page == title)
   const projects:ProjectInfo[] = useSelector((state:RootState) => state.projects)
   const projInfo: ProjectInfo | undefined = projects.find((p) => p.page == stringTitle)
-  const fetchInfo = async () => {
-    const resp = await import(`@/lib/projects/${title}`)
-    setInfo(resp[`${title}`])
-    /*try {
-      const files = await readdir(path.join(''));
-      for (const file of files)
-       console.log(file);
-    } catch (err) {
-     console.error(err);
-    }*/
-  }
   //console.log('first', readdir('/images/projectImages/ClockProject'))
   useEffect(() => {
-    fetchInfo()
     useRepoInfo(stringTitle).then(info => {dispatch(addFetchedInfo({title: stringTitle, info}))
       console.log('info', projInfo)})   
     //console.log('projInfo', projInfo)
@@ -65,29 +53,28 @@ export default function Project() {
         </div> */
   return (
     <div>
-      <Link href={'/'} className="absolute mt-3 ml-8">&#60; Back</Link>
+      <Link href={'/'} className="hover:shadow-xl absolute mt-3 ml-8 border-1 rounded-xl px-2 py-0 border-black">&#60; Back</Link>
       <div className="flex w-11/12 justify-center m-auto max-h-[10%]">
         <Carousel className="w-3/4 flex-none border-y-4 border-l-4 border-black rounded-l-xl mt-14 align-middle">
-          {info?.imageFolder.map((p, index) => {
+          {projInfo?.imageFolder.map((p, index) => {
             return(
             <Carousel.Item key={index}>
               <img src={`/images/projectImages/${p}`} className="rounded-l-md"/>
             </Carousel.Item>
           )})}
         </Carousel>
-        <div className="mt-14 border-y-4 border-r-4 border-black rounded-r-xl bg-zinc-400 align-middle p-3 max-w-[33%]">
+        <div className="mt-14 border-y-4 border-r-4 border-black rounded-r-xl bg-zinc-400 align-middle p-3 max-w-[25%]">
           <p className="inline break-words"><span className="font-bold text-2xl">{projInfo?.title}</span>   <br/>
             
             {curProj?.description}    <br/>
             
-            <span className="font-bold">Tags:</span>
+            <span className="font-bold">Used:</span>
           </p>
           {projInfo?.used.map((text, index) => {
             return (
             <Tag key={index} t={text}/>
           )})} <br />
           <p className="inline"><span className="font-bold text-2xl"></span>
-
             <span className="font-bold">Created: </span> {projInfo?.createdAt} <br />
             <span className="font-bold">Size: </span> {projInfo?.size} <br />
             <span className="font-bold">Link: </span> <a href={projInfo?.github} target="_blank" className="break-words">{projInfo?.github} </a>   <br/>

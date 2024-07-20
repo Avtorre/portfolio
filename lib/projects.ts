@@ -6,9 +6,9 @@ export const projects: ProjectInfo[] = [
     title:'Clock Project',
     imageFolder: ['clock_re/ClockProjectPreview.png', 'clock_re/PicturebinPreview.png', 'clock_re/PortfolioPreview.png'],
     createdAt: '',
-    description: 'SSBERUZJTklURUxZIHdpbGwgY2xlYW4gdGhlIGNvZGUgYW5kIGRlbGV0ZSBh\nbGwgcmVkdW5kYW50IGxpbmVzIGFuZCBpbXBvcnRzICpDbHVlbGVzcyoK\n',
+    description: '',
     github: '',
-    used:['asd', 'dasyh', '324sd', 'dfgh', 'dasyh', '324sd', 'dfgh', 'dasyh', '324sd'],
+    used:['React.js', 'React-Router'],
     size: ''
   },
   {
@@ -18,7 +18,7 @@ export const projects: ProjectInfo[] = [
     createdAt: '',
     description: '',
     github: '',
-    used:['asd', 'dfgh', 'dasyh', '324sd'],
+    used:['React.js','React-bootstrap', 'Axios', 'MobX', 'React-Router', 'Express', 'Sequelize', 'PostgreSQL'],
     size: ''
   },
   {
@@ -28,7 +28,7 @@ export const projects: ProjectInfo[] = [
     createdAt: '',
     description: '',
     github: '',
-    used:['asd', 'dfgh', 'dasyh', '324sd'],
+    used:['Next.js', 'TypeScript', 'Tailwind CSS', 'Redux','React-bootstrap', 'Octokit'],
     size: ''
   }
 ]
