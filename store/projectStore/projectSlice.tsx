@@ -13,14 +13,8 @@ const projectSlice = createSlice({
             return state =  [...state, action.payload]
         },
         addFetchedInfo: (state, action: {payload: {title: string, info: FetchedRepoInfo}}) => {
-            //const upd = state.find((st) => st.page)
             return state=state.map( st => {
-                if (st.page == action.payload.title) {
-                   console.log('first', action.payload)
-                   st = {...st, ...action.payload.info}
-                   console.log('st', st)
-                   return st
-                } else return st
+                return st = {...st, ...action.payload.info}
             })
         },
         removeProject: (state, action) => {

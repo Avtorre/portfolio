@@ -11,59 +11,32 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-//import { readdir } from 'node:fs/promises';
-//import path from "node:path";
            
 export default function Project() {
-
-  let txt = 'some text here '
-  let filler = []
-  for (let i = 0; i < 90; i++) {
-    filler.push(txt) 
-  }
-
-  const [info, setInfo] = useState<ProjectInfo>()
-  if (typeof useParams() === 'string') {
-    
-  }
   const {title} = useParams()
   const stringTitle = title.toString()
   const dispatch = useDispatch()
   const curProj: ProjectCard | undefined = ProjectLib.find((p) => p.page == title)
   const projects:ProjectInfo[] = useSelector((state:RootState) => state.projects)
   const projInfo: ProjectInfo | undefined = projects.find((p) => p.page == stringTitle)
-  //console.log('first', readdir('/images/projectImages/ClockProject'))
   useEffect(() => {
-    useRepoInfo(stringTitle).then(info => {dispatch(addFetchedInfo({title: stringTitle, info}))
-      console.log('info', projInfo)})   
-    //console.log('projInfo', projInfo)
+    useRepoInfo(stringTitle).then(info => dispatch(addFetchedInfo({title: stringTitle, info})))   
   }, [])
-//
-/*
-<img src={`/images/projectImages/${info?.imageFolder}`} className="w-3/4 flex-none align-middle h-auto"/>
-      <div className=" bg-slate-600 align-middle p-3">
-        <b>{info?.title}</b>   <br/>
-        {info?.description}  
-      </div>
-*/
-  let newFiller= atob('SSBERUZJTklURUxZIHdpbGwgY2xlYW4gdGhlIGNvZGUgYW5kIGRlbGV0ZSBh\nbGwgcmVkdW5kYW50IGxpbmVzIGFuZCBpbXBvcnRzICpDbHVlbGVzcyoK\n')
-/**<div>
-          <h1>Notes:</h1>
-          <p>{filler}</p>
-        </div> */
+
+
   return (
     <div>
-      <Link href={'/'} className="hover:shadow-xl absolute mt-3 ml-8 border-1 rounded-xl px-2 py-0 border-black">&#60; Back</Link>
-      <div className="flex w-11/12 justify-center m-auto max-h-[10%]">
-        <Carousel className="w-3/4 flex-none border-y-4 border-l-4 border-black rounded-l-xl mt-14 align-middle">
+      <Link href={'/'} className="hover:shadow-xl absolute mt-3 ml-8 border-1 rounded-xl px-2 py-0 border-black max-carousel-fix:top-14">&#60; Back</Link>
+      <div className="flex w-11/12 justify-center m-auto max-carousel-fix:block">
+        <Carousel className="w-4/5 border-y-4 border-l-4 border-black rounded-l-xl mt-14 align-middle max-carousel-fix:border-r-4 max-carousel-fix:w-full max-carousel-fix:rounded-t-xl max-carousel-fix:rounded-b-none">
           {projInfo?.imageFolder.map((p, index) => {
             return(
             <Carousel.Item key={index}>
-              <img src={`/images/projectImages/${p}`} className="rounded-l-md"/>
+              <img src={`/images/projectImages/${p}`} className="max-carousel-fix:rounded-t-xl max-carousel-fix:rounded-b-none"/>
             </Carousel.Item>
           )})}
         </Carousel>
-        <div className="mt-14 border-y-4 border-r-4 border-black rounded-r-xl bg-zinc-400 align-middle p-3 max-w-[25%]">
+        <div className="w-1/5 mt-14 border-y-4 border-r-4 border-black rounded-r-xl bg-zinc-400 align-middle p-3 max-carousel-fix:w-full max-carousel-fix:border-t-0 max-carousel-fix:border-l-4 max-carousel-fix:mt-0 max-carousel-fix:rounded-b-xl max-carousel-fix:rounded-t-none">
           <p className="inline break-words"><span className="font-bold text-2xl">{projInfo?.title}</span>   <br/>
             
             {curProj?.description}    <br/>
@@ -83,11 +56,11 @@ export default function Project() {
       </div>
       <div className="w-5/6 mt-7 mx-auto">
         <h1 className="font-bold text-3xl mb-3">Notes:</h1>
-        <p className="ml-3">
+        <pre className="ml-3 font-inter text-xl whitespace-pre-wrap">
           
           {projInfo?.description}
           
-        </p>
+        </pre>
       </div>
     </div>
       

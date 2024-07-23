@@ -11,11 +11,10 @@ const Projects = () => {
   useEffect(() => {
     setProjectList(ProjectLib)
   }, []);
-  //setProjectList([...projectList, ClockProject])
   return (
     <div className="mb-1">
       <p className="text-4xl font-bold text-center mt-2 font-sans">My projects</p>
-      <div className="h-max min-w-fit w-2/3 md:w-4/5 m-auto border-zinc-700 border-2 rounded-xl border-solid mt-4 p-6 grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-x-4 gap-y-14 justify-items-center py-14">
+      <div className="h-max min-w-fit w-2/3 sm:max-lg:w-11/12 m-auto border-zinc-700 border-2 rounded-xl border-solid mt-4 grid sm:max-2xl:grid-cols-2  2xl:grid-cols-3 gap-y-14 justify-items-center py-14">
         {projectList.map(project => 
           <Link key={project.id} href={`/projects/${project.page}`}>
             <ProjectItem key={project.id} imageSrc={project.preview} title={project.title} description={project.description}/>
