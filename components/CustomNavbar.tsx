@@ -9,7 +9,7 @@ const CustomNavbar = () => {
         <Container className="m-auto">
           <Nav className="m-auto gap-4 ">
             <NavLink active={usePathname() === '/'} href="/" className="">Home</NavLink>
-            <NavLink active={usePathname() === '/projects/portfolio'} href="/projects/portfolio">About</NavLink>
+            <NavLink active={usePathname() === '/about'} href="/about">About</NavLink>
           </Nav>
         </Container>
       </Navbar>
