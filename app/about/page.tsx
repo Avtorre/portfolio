@@ -9,7 +9,7 @@ export default function About() {
         <p>This project was made as a part of my portfolio and supposed to be found through the link in my resume. </p>
         <p>If you have any questions you can send them on e-mail stated on the main page. </p>
         <p>For more info on the project check <Link href="/projects/portfolio"><span className="underline">this</span></Link> page. </p>
-        <p>Hosted on GitHub Pages.</p>
+        <p>Hosted on Vercel.</p>
       </div>
     </div>
       
