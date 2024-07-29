@@ -30,8 +30,9 @@ const Resume = () => {
             Netvision
           </p>
           <p className="ml-3">
-            - Developed client side of a new web application using Next, Redux, TypeScript, Tailwind, React-bootstrap.  <br />
-            - Analysed two versions of an already existing web application to propose possible improvements to it and to get better acquainted with the structure of big projects.
+            - Developed and maintained front-end of a new web application using Next, Redux, TypeScript, Tailwind, React-bootstrap.  <br />
+            - Collaborated with back-end developers to decide on general data structure and API requests. <br />
+            - Analysed two versions of an another web application to propose possible improvements to it and to get better acquainted with the structure of big projects.
           </p>
         </div>
       <h3 className="font-bold mt-1 text-xl my-2">Education:</h3> 
@@ -40,7 +41,7 @@ const Resume = () => {
               <span className="font-semibold text-md">Povolzhskiy State University of Telecommunications and Informatics</span> <span className="inline-flex w-fit ml-auto self-end">2021 - 2025</span>
             </p> 
             <p className="ml-2 flex-col leading-5">
-              Informatics and computer technology, Bachelor's degree
+              Informatics and computer technology, Bachelor&#39;s degree
             </p>
         </div>
         <h3 className="font-bold mt-1 text-xl my-2">Skills & Competencies:</h3> 
