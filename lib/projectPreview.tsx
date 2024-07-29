@@ -13,7 +13,7 @@ export const ProjectLib= [
     page: 'clock_re',
     preview: '/images/projectImages/clock_re/clockProject_preview.png',
     title: 'Clock Project',
-    description: 'Compilation of several projects.'
+    description: 'Combination of several projects.'
   },
   {
     id: 3,
