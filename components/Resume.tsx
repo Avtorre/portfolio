@@ -24,7 +24,7 @@ const Resume = () => {
       <h3 className="font-bold mt-1 text-xl my-2">Experience:</h3>
         <div className="w-11/12 mx-auto">
           <p className="flex mt-1 leading-4">
-            <span className="font-semibold text-md underline ">Frontend Developer Intern </span> <span className="inline-flex w-fit ml-auto self-end">05/2024 - 07/2024</span>
+            <span className="font-semibold text-md underline ">Frontend Developer Intern </span> <span className="inline-flex w-fit ml-auto self-end">04/2024 - 07/2024</span>
           </p> 
           <p className="font-semibold ml-2 flex-col leading-5">
             Netvision
