@@ -30,5 +30,15 @@ export const projects: ProjectInfo[] = [
     github: '',
     used:['Next.js', 'TypeScript', 'Tailwind CSS', 'Redux','React-bootstrap', 'Octokit'],
     size: ''
+  },
+  {
+    page: 'internetlab-task',
+    title:'Test assignment',
+    imageFolder: ['internetlab/internetlab_main.png', 'internetlab/internetlab_how.png', 'internetlab/internetlab_comments.png', 'internetlab/internetlab_qna.png', 'internetlab/internetlab_form1.png', 'internetlab/internetlab_form2.png', 'internetlab/internetlab_form3.png', 'internetlab/internetlab_main_768.png', 'internetlab/internetlab_navbar_768.png', 'internetlab/internetlab_how_768.png', 'internetlab/internetlab_form_768.png', 'internetlab/internetlab_main_mobile.png', 'internetlab/internetlab_navbar_mobile.png', 'internetlab/internetlab_how_mobile.png', 'internetlab/internetlab_comments_mobile.png', 'internetlab/internetlab_form_mobile.png'],
+    createdAt: '',
+    description: '',
+    github: '',
+    used:['React.js', 'TypeScript', 'Sass', 'Redux'],
+    size: ''
   }
 ]

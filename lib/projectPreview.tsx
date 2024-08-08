@@ -21,5 +21,12 @@ export const ProjectLib= [
     preview: '/images/projectImages/picturebin/picturebin_preview.png',
     title: 'Image hosting',
     description: 'Fullstack project.'
+  },
+  {
+    id: 4,
+    page: 'internetlab-task',
+    preview: '/images/projectImages/internetlab/internetlab_main.png',
+    title: 'Test assignment',
+    description: 'SPA with responsive design.'
   }
 ] as ProjectCard[]
