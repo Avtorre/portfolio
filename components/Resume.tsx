@@ -48,7 +48,7 @@ const Resume = () => {
         <div className="w-1/3 max-carousel-fix:w-2/3 max-sm:w-full ml-11 mr-auto sm:columns-2 pl-3 gap-0">
             <ul className="list-disc">
               <li>HTML </li>
-              <li>CSS</li>
+              <li>CSS/Sass</li>
               <li>JavaScript</li> 
               <li>React</li>
               <li>MobX</li>
