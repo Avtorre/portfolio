@@ -40,5 +40,15 @@ export const projects: ProjectInfo[] = [
     github: '',
     used:['React.js', 'TypeScript', 'Sass', 'Redux'],
     size: ''
+  },
+  {
+    page: 'ghrepo-finder',
+    title:'Repo finder',
+    imageFolder: ['repo-finder/repo-finder_welcome.png', 'repo-finder/repo-finder_choice.png', 'repo-finder/repo-finder_search.png', 'repo-finder/repo-finder_preview.png'],
+    createdAt: '',
+    description: '',
+    github: '',
+    used:['React.js', 'TypeScript', 'Sass', 'Redux', 'Material UI'],
+    size: ''
   }
 ]
