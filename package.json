@@ -15,6 +15,7 @@
     "bootstrap": "^5.3.3",
     "next": "14.2.4",
     "octokit": "^4.0.2",
+    "portfolio": "file:",
     "react": "^18",
     "react-bootstrap": "^2.10.3",
     "react-dom": "^18",
